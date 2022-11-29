@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:scrolling_years_calendar/scrolling_years_calendar.dart';
 
@@ -40,25 +42,42 @@ class HomePage extends StatelessWidget {
           highlightedDates: getHighlightedDates(),
           highlightedDateColor: Colors.deepOrange,
           monthNames: const <String>[
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec',
+            'มกราคม',
+            'กุมภาพันธ์',
+            'มีนาคม',
+            'เมษายน',
+            'พฤษภาคม',
+            'มิถุนายน',
+            'กรกฎาคม ',
+            'สิงหาคม',
+            'กันยายน',
+            'ตุลาคม',
+            'พฤศจิกายน',
+            'ธันวาคม',
           ],
+          // monthNames: const <String>[
+          //   'Jan',
+          //   'Feb',
+          //   'Mar',
+          //   'Apr',
+          //   'May',
+          //   'Jun',
+          //   'Jul',
+          //   'Aug',
+          //   'Sep',
+          //   'Oct',
+          //   'Nov',
+          //   'Dec',
+          // ],
           onMonthTap: (int year, int month) => print('Tapped $month/$year'),
+
           monthTitleStyle: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Colors.blue,
-          ),
+              fontSize: 15.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              height: 1.5
+              // backgroundColor: Colors.red[700]
+              ),
         ),
       ),
     );

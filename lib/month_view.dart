@@ -85,9 +85,10 @@ class MonthView extends StatelessWidget {
   Widget buildMonthView(BuildContext context) {
     return Container(
       width: 7 * getDayNumberSize(context),
+      // margin: EdgeInsets.all(padding),
       margin: EdgeInsets.all(padding),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           MonthTitle(
             month: month,
@@ -95,7 +96,10 @@ class MonthView extends StatelessWidget {
             style: titleStyle,
           ),
           Container(
-            margin: const EdgeInsets.only(top: 8.0),
+            margin: const EdgeInsets.only(
+              top: 4.0,
+              // bottom: 4.0,
+            ),
             child: buildMonthDays(context),
           ),
         ],

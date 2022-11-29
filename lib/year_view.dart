@@ -24,8 +24,8 @@ class YearView extends StatelessWidget {
   final Function onMonthTap;
   final TextStyle monthTitleStyle;
 
-  double get horizontalMargin => 16.0;
-  double get monthViewPadding => 8.0;
+  double get horizontalMargin => 20.0;
+  double get monthViewPadding => 6.0;
 
   Widget buildYearMonths(BuildContext context) {
     final List<Row> monthRows = <Row>[];
@@ -50,7 +50,7 @@ class YearView extends StatelessWidget {
       if (month % 3 == 0) {
         monthRows.add(
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: List<MonthView>.from(monthRowChildren),
           ),
@@ -94,6 +94,7 @@ class YearView extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(
               horizontal: horizontalMargin - monthViewPadding,
+              // horizontal: horizontalMargin - monthViewPadding,
               vertical: 0.0,
             ),
             child: buildYearMonths(context),
