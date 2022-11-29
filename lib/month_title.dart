@@ -22,16 +22,27 @@ class MonthTitle extends StatelessWidget {
     return Container(
       width: 120,
       decoration: BoxDecoration(
-          color: Colors.red[700],
+          color: month == DateTime.now().month ? Colors.red[700] : Colors.white,
           border: Border.all(
-            color: Colors.red[700],
+            color:
+                month == DateTime.now().month ? Colors.red[700] : Colors.white,
           ),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(8), topRight: Radius.circular(8))),
       child: Text(
         getMonthName(month, monthNames: monthNames),
         textAlign: TextAlign.center,
-        style: style,
+        style:
+            // style,
+            TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+                color: month == DateTime.now().month
+                    ? Colors.white
+                    : Colors.grey[400],
+                height: 1.5
+                // backgroundColor: Colors.red[700]
+                ),
         maxLines: 1,
         overflow: TextOverflow.fade,
         softWrap: false,

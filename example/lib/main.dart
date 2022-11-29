@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(254, 241, 241, 1),
       appBar: AppBar(
         title: const Text('Flutter Scrolling Calendar'),
       ),
@@ -36,7 +37,7 @@ class HomePage extends StatelessWidget {
           initialDate: DateTime.now(),
           firstDate: DateTime.now().subtract(const Duration(days: 5 * 365)),
           lastDate: DateTime.now().add(const Duration(days: 5 * 365)),
-          currentDateColor: Colors.blue,
+          currentDateColor: Colors.blueAccent,
 
           // Optional parameters
           highlightedDates: getHighlightedDates(),
@@ -74,7 +75,7 @@ class HomePage extends StatelessWidget {
           monthTitleStyle: TextStyle(
               fontSize: 15.0,
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              // color: Colors.white,
               height: 1.5
               // backgroundColor: Colors.red[700]
               ),

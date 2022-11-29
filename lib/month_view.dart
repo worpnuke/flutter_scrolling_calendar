@@ -31,7 +31,7 @@ class MonthView extends StatelessWidget {
 
   Color getDayNumberColor(DateTime date) {
     Color color;
-    // print(date.weekday);
+    // print(DateTime.now().month);
     if (date.weekday == 6 || date.weekday == 7) {
       color = Colors.redAccent; // ! change text color
     }
