@@ -67,15 +67,17 @@ class YearView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getYearViewHeight(context),
-      padding: const EdgeInsets.only(top: 16.0),
+      // height: getYearViewHeight(context),
+      height: 700, // ! set here
+      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
             margin: EdgeInsets.symmetric(
               horizontal: horizontalMargin,
-              vertical: 0.0,
+              vertical: 00.0,
             ),
             child: YearTitle(year),
           ),

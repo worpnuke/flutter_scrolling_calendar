@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
           context: context,
           initialDate: DateTime.now(),
           firstDate: DateTime.now().subtract(const Duration(days: 5 * 365)),
-          lastDate: DateTime.now(),
+          lastDate: DateTime.now().add(const Duration(days: 5 * 365)),
           currentDateColor: Colors.blue,
 
           // Optional parameters

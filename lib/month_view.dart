@@ -31,6 +31,10 @@ class MonthView extends StatelessWidget {
 
   Color getDayNumberColor(DateTime date) {
     Color color;
+    // print(date.weekday);
+    if (date.weekday == 6 || date.weekday == 7) {
+      color = Colors.redAccent; // ! change text color
+    }
     if (isCurrentDate(date)) {
       color = currentDateColor;
     } else if (highlightedDates != null &&
@@ -45,7 +49,8 @@ class MonthView extends StatelessWidget {
     final List<DayNumber> dayRowChildren = <DayNumber>[];
 
     final int daysInMonth = getDaysInMonth(year, month);
-    final int firstWeekdayOfMonth = DateTime(year, month, 1).weekday;
+    final int firstWeekdayOfMonth = DateTime(year, month, 2).weekday;
+    // ! change weekday start from SUN, a week starts with Monday, which has the value 1.
 
     for (int day = 2 - firstWeekdayOfMonth; day <= daysInMonth; day++) {
       Color color;
@@ -104,9 +109,9 @@ class MonthView extends StatelessWidget {
         ? Container(
             child: buildMonthView(context),
           )
-        : FlatButton(
+        : TextButton(
             onPressed: () => onTap(year, month),
-            padding: const EdgeInsets.all(0.0),
+            // padding: const EdgeInsets.all(0.0),
             child: buildMonthView(context),
           );
   }

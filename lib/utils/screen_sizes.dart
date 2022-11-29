@@ -19,7 +19,7 @@ ScreenSizes screenSize(BuildContext context) {
 
 /// Gets the size of the day number widget.
 double getDayNumberSize(BuildContext context) {
-  return screenSize(context) == ScreenSizes.small ? 12.0 : 16.0;
+  return screenSize(context) == ScreenSizes.small ? 13.2 : 16.0;
 }
 
 /// Gets the vertical space that one month view takes up.
@@ -35,7 +35,7 @@ double getMonthViewHeight(BuildContext context) {
 double getYearViewHeight(BuildContext context) {
   const double topPadding = 40.0;
   final double titleHeight =
-      screenSize(context) == ScreenSizes.small ? 26.0 : 31.0;
+      screenSize(context) == ScreenSizes.small ? 27.0 : 31.0;
   const double dividerHeight = 16.0;
 
   return topPadding +
